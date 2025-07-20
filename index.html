@@ -1,55 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Calculator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="calculator">
-    
-    <input type="text" placeholder="0" id="inputBox">
+    <h1 class="title">Image Gallery</h1>
 
-    <div>
-      <button class="operator">AC</button>
-      <button class="operator">DEL</button>
-      <button class="operator">%</button>
-      <button class="operator">/</button>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1011/300/200" alt="Image 1" class="gallery-img" />
+        <img src="https://picsum.photos/id/1015/300/200" alt="Image 2" class="gallery-img" />
+        <img src="https://picsum.photos/id/1016/300/200" alt="Image 3" class="gallery-img" />
+        <img src="https://picsum.photos/id/1020/300/200" alt="Image 4" class="gallery-img" />
+        <img src="https://picsum.photos/id/1024/300/200" alt="Image 5" class="gallery-img" />
+        <img src="https://picsum.photos/id/1035/300/200" alt="Image 6" class="gallery-img" />
     </div>
 
-    <div>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="operator">*</button>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img" />
+        <div id="caption"></div>
     </div>
 
-    <div>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="operator">-</button>
-    </div>
-
-    <div>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="operator">+</button>
-    </div>
-
-    <div>
-      <button>00</button>
-      <button>0</button>
-      <button>.</button>
-      <button class="equalBtn">=</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,30 +1,16 @@
-let input = document.getElementById('inputBox'); 
-let buttons = document.querySelectorAll('button');
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".close");
 
-let string = "";
-let arr = Array.from(buttons);
-
-arr.forEach(button => {
-  button.addEventListener('click', (e) => {
-    const value = e.target.innerHTML;
-
-    if (value === '=') {
-      try {
-        string = eval(string);
-        input.value = string;
-      } catch {
-        input.value = "Error";
-        string = "";
-      }
-    } else if (value === 'AC') { 
-      string = "";
-      input.value = string;
-    } else if (value === 'DEL') {
-      string = string.slice(0, -1);
-      input.value = string;
-    } else {
-      string += value;
-      input.value = string;
-    }
-  });
+document.querySelectorAll(".gallery-img").forEach(img => {
+    img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.textContent = img.alt;
+    });
 });
+
+closeBtn.onclick = () => {
+    modal.style.display = "none";
+};
